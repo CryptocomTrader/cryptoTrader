@@ -515,11 +515,26 @@ section {
 }
 
 .stat-symbol {
-    font-size: 2rem;
+    font-size: 4rem;
     color: var(--accent-color);
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    text-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+    position: relative;
+    display: inline-block;
+    animation: glowPulse 2s infinite;
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 25px rgba(100, 255, 218, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(100, 255, 218, 0.4);
+    }
 }
 
 .stat-number {
