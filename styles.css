@@ -229,6 +229,42 @@ section h2 {
     color: white;
 }
 
+/* Partners Section */
+.partners {
+    background-color: #f4f6f7;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.partners h2 {
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.partner-logo {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.partner-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
     .reasons-grid,
@@ -251,6 +287,11 @@ section h2 {
 
     .hero-subtitle {
         font-size: 20px;
+    }
+
+    .partners-logos {
+        flex-direction: column;
+        gap: 30px;
     }
 }
 
