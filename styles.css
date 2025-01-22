@@ -223,8 +223,8 @@ section {
 .partners-logos {
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    gap: 30px;
+    align-items: center;
+    gap: 40px;
     margin: 0 auto;
     flex-wrap: wrap;
     max-width: 900px;
@@ -233,34 +233,35 @@ section {
 
 .partner-logo {
     width: 125px;
-    height: 80px;
+    height: 125px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.03);
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-decoration: none;
 }
 
 .partner-logo img {
-    width: 100%;
-    height: 45px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    margin-bottom: 10px;
+    border-radius: 50%;
     transition: all 0.3s ease;
     filter: brightness(0.9);
 }
 
 .partner-logo span {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     text-align: center;
     transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 .partner-logo:hover {
@@ -271,6 +272,7 @@ section {
 
 .partner-logo:hover img {
     filter: brightness(1);
+    transform: scale(1.05);
 }
 
 .partner-logo:hover span {
@@ -331,22 +333,23 @@ section {
     }
 
     .partners-logos {
-        gap: 15px;
+        gap: 20px;
     }
 
     .partner-logo {
-        width: 110px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
         padding: 10px;
     }
 
     .partner-logo img {
-        height: 35px;
-        margin-bottom: 8px;
+        width: 60px;
+        height: 60px;
     }
 
     .partner-logo span {
-        font-size: 12px;
+        font-size: 14px;
+        margin-top: 8px;
     }
 }
 
