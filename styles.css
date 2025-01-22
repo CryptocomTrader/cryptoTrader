@@ -233,17 +233,18 @@ section {
 
 .partner-logo {
     width: 150px;
-    height: 170px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.03);
-    padding: 15px;
+    padding: 20px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     text-decoration: none;
+    gap: 20px;
 }
 
 .partner-logo img {
@@ -252,16 +253,17 @@ section {
     object-fit: contain;
     transition: all 0.3s ease;
     filter: brightness(0.9);
-    margin-bottom: 15px;
 }
 
 .exchange-name {
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     text-align: center;
     transition: all 0.3s ease;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    display: block;
+    margin-top: auto;
 }
 
 .partner-logo:hover {
