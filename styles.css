@@ -207,9 +207,11 @@ section {
 
 .partners {
     padding: 15px 0;
-    background: rgba(17, 34, 64, 0.5);
+    background: rgba(17, 24, 39, 0.6);
     backdrop-filter: blur(10px);
-    margin-bottom: 20px;
+    border-radius: 16px;
+    margin: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .partners h2 {
@@ -222,7 +224,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     margin: 15px auto;
     flex-wrap: wrap;
     max-width: 800px;
@@ -230,15 +232,16 @@ section {
 }
 
 .partner-logo {
-    width: 100px;
-    height: 35px;
+    width: 120px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 8px 15px;
-    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .partner-logo img {
@@ -246,11 +249,17 @@ section {
     height: 100%;
     object-fit: contain;
     transition: all 0.3s ease;
+    filter: brightness(0.9);
 }
 
 .partner-logo:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.partner-logo:hover img {
+    filter: brightness(1);
 }
 
 @media (max-width: 768px) {
@@ -297,6 +306,7 @@ section {
     }
 
     .partners {
+        margin: 10px;
         padding: 10px 0;
     }
     
@@ -305,13 +315,13 @@ section {
     }
 
     .partners-logos {
-        gap: 15px;
+        gap: 20px;
     }
 
     .partner-logo {
-        width: 90px;
-        height: 30px;
-        padding: 6px 12px;
+        width: 100px;
+        height: 35px;
+        padding: 8px 15px;
     }
 }
 
