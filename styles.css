@@ -732,29 +732,32 @@ footer {
 
 /* Reviews Section */
 .reviews {
-    padding: 40px 20px;
+    padding: 40px 0;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
 }
 
 .reviews h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding: 0 15px;
 }
 
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 20px;
+    gap: 20px;
+    padding: 0 15px;
 }
 
 .review-card {
     background: rgba(13, 21, 39, 0.4);
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .review-card p {
@@ -772,96 +775,108 @@ footer {
 
 /* Reasons Section */
 .reasons {
-    padding: 40px 20px;
+    padding: 40px 0;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
 }
 
 .reasons h2 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding: 0 15px;
 }
 
 .reasons-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    padding: 20px;
+    gap: 20px;
+    padding: 0 15px;
 }
 
 .reason-card {
     background: rgba(13, 21, 39, 0.4);
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .reason-card h3 {
     color: #64ffda;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
 }
 
 .reason-card p {
     color: #fff;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     .reviews,
     .reasons {
-        padding: 30px 15px;
+        padding: 30px 0;
     }
 
     .reviews-grid,
     .reasons-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 10px;
+        gap: 15px;
+        padding: 0 15px;
     }
 
     .review-card,
     .reason-card {
-        padding: 20px;
+        padding: 15px;
+        margin: 0;
     }
 
     .review-card p,
     .reason-card p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
     }
 
     .reason-card h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .review-author {
         font-size: 0.85rem;
+    }
+
+    .reviews h2,
+    .reasons h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        padding: 0 15px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .reviews,
     .reasons {
-        padding: 20px 10px;
+        padding: 20px 0;
     }
 
     .reviews h2,
     .reasons h2 {
-        font-size: 1.8rem;
-        margin-bottom: 25px;
+        font-size: 1.2rem;
+        margin-bottom: 15px;
     }
 
     .reviews-grid,
     .reasons-grid {
         padding: 5px;
-        gap: 15px;
+        gap: 10px;
     }
 
     .review-card,
     .reason-card {
-        padding: 15px;
+        padding: 10px;
     }
 }
