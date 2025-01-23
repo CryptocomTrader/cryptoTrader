@@ -63,7 +63,7 @@ main {
     animation: float 5s infinite;
 }
 
-/* Header with Futuristic Design */
+/* Header and Navigation */
 .header {
     position: fixed;
     top: 0;
@@ -75,6 +75,38 @@ main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu */
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -83,6 +115,7 @@ main {
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
+    z-index: 1001;
 }
 
 .mobile-menu {
@@ -91,11 +124,12 @@ main {
     top: 60px;
     left: 0;
     width: 100%;
-    background: rgba(13, 21, 39, 0.95);
+    background: rgba(13, 21, 39, 0.98);
     backdrop-filter: blur(10px);
     padding: 20px;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .mobile-menu.active {
@@ -117,7 +151,7 @@ main {
     text-decoration: none;
     font-size: 1.2rem;
     display: block;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
     transition: all 0.3s ease;
 }
@@ -126,25 +160,18 @@ main {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.nav-links a {
-    color: var(--light-text);
-    position: relative;
-    transition: all 0.3s ease;
-}
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--accent-color);
-    transition: width 0.3s;
-}
+    .mobile-menu-btn {
+        display: block;
+    }
 
-.nav-links a:hover::after {
-    width: 100%;
+    .header nav {
+        padding: 10px 15px;
+    }
 }
 
 /* Hero Section with 3D Effect */

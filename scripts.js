@@ -52,3 +52,33 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 // Проверяем видимость при загрузке страницы
 handleScroll();
+
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+    menuBtn.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        menuBtn.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
+    });
+
+    // Close menu when clicking on a link
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            menuBtn.textContent = '☰';
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.mobile-menu') && 
+            !event.target.closest('.mobile-menu-btn') && 
+            mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            menuBtn.textContent = '☰';
+        }
+    });
+});
