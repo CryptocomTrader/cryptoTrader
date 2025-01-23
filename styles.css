@@ -700,190 +700,106 @@ footer {
 
 /* Partners Section */
 .partners {
-    padding: 60px 0;
+    padding: 40px 20px;
     margin: 0 auto;
     max-width: 1200px;
     text-align: center;
 }
 
 .partners-title {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.8rem;
+    font-weight: 700;
     color: #fff;
     text-shadow: 0 0 10px rgba(0, 180, 255, 0.8),
                  0 0 20px rgba(0, 180, 255, 0.6),
-                 0 0 30px rgba(0, 180, 255, 0.4),
-                 0 0 40px rgba(0, 180, 255, 0.2);
-    margin-bottom: 60px;
+                 0 0 30px rgba(0, 180, 255, 0.4);
+    margin-bottom: 40px;
     position: relative;
     display: inline-block;
-    padding: 0 30px;
+    padding: 0 20px;
     letter-spacing: 1px;
-    z-index: 1;
-}
-
-.partners-title::before {
-    content: '';
-    position: absolute;
-    width: 140%;
-    height: 140%;
-    top: -20%;
-    left: -20%;
-    background: radial-gradient(
-        circle at center,
-        rgba(0, 180, 255, 0.2),
-        transparent 70%
-    );
-    z-index: -1;
-    filter: blur(15px);
-}
-
-.partners-title::after {
-    content: '';
-    position: absolute;
-    width: 120%;
-    height: 3px;
-    bottom: -15px;
-    left: -10%;
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #00B4FF,
-        #64FFDA,
-        #00B4FF,
-        transparent
-    );
-    filter: blur(1px);
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        opacity: 0.8;
-        filter: blur(1px);
-    }
-    to {
-        opacity: 1;
-        filter: blur(2px);
-    }
+    line-height: 1.4;
 }
 
 .partners-logos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 20px;
-    margin-top: 50px;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 400px;
 }
 
 .exchange-name-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    max-width: 300px;
-    height: 120px;
+    padding: 15px;
     background: rgba(13, 21, 39, 0.4);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     text-decoration: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.exchange-name-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.05),
-        transparent
-    );
-    transition: 0.5s;
-}
-
-.exchange-name-card:hover::before {
-    left: 100%;
-}
-
-.exchange-name-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 20px rgba(0, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .exchange-title {
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .binance-style {
-    background: linear-gradient(45deg, #F3BA2F, #FFED4A);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(243, 186, 47, 0.3);
+    color: #F3BA2F;
+    text-shadow: 0 0 15px rgba(243, 186, 47, 0.3);
 }
 
 .bybit-style {
-    background: linear-gradient(45deg, #FFB800, #FF6B00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(255, 184, 0, 0.3);
+    color: #FFB800;
+    text-shadow: 0 0 15px rgba(255, 184, 0, 0.3);
 }
 
 .kucoin-style {
-    background: linear-gradient(45deg, #0AB27D, #4FFF9C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(10, 178, 125, 0.3);
+    color: #0AB27D;
+    text-shadow: 0 0 15px rgba(10, 178, 125, 0.3);
 }
 
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
-    .partners-logos {
-        grid-template-columns: 1fr;
-        gap: 20px;
+/* Desktop Styles */
+@media screen and (min-width: 768px) {
+    .partners-title {
+        font-size: 3.5rem;
     }
 
-    .partners-title {
-        font-size: 2.8rem;
+    .partners-logos {
+        flex-direction: row;
+        max-width: 1000px;
+        gap: 30px;
+        padding: 20px;
     }
 
     .exchange-name-card {
-        height: 100px;
+        padding: 20px;
     }
 
     .exchange-title {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
 }
 
+/* Mobile Styles */
 @media screen and (max-width: 480px) {
     .partners {
-        padding: 30px 0;
+        padding: 30px 15px;
     }
 
     .partners-title {
         font-size: 2.2rem;
-    }
-
-    .exchange-name-card {
-        height: 80px;
+        padding: 0 10px;
+        margin-bottom: 30px;
     }
 
     .exchange-title {
         font-size: 1.8rem;
-        letter-spacing: 2px;
     }
 }
 
