@@ -1,25 +1,27 @@
 /* Partners Section Styles */
 .partners {
-    padding: 40px 0;
+    padding: 60px 0;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .partners-logos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    flex-wrap: wrap;
-    margin: 40px 0;
     padding: 20px;
+    margin-top: 50px;
+    place-items: center;
 }
 
 .exchange-name-card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
     height: 120px;
-    background: rgba(13, 21, 39, 0.6);
+    background: rgba(13, 21, 39, 0.4);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -56,9 +58,9 @@
 }
 
 .exchange-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: 3px;
     text-transform: uppercase;
     position: relative;
 }
@@ -67,47 +69,62 @@
     background: linear-gradient(45deg, #F3BA2F, #FFED4A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(243, 186, 47, 0.5);
+    text-shadow: 0 0 30px rgba(243, 186, 47, 0.3);
 }
 
 .bybit-style {
     background: linear-gradient(45deg, #FFB800, #FF6B00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(255, 184, 0, 0.5);
+    text-shadow: 0 0 30px rgba(255, 184, 0, 0.3);
 }
 
 .kucoin-style {
     background: linear-gradient(45deg, #0AB27D, #4FFF9C);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(10, 178, 125, 0.5);
+    text-shadow: 0 0 30px rgba(10, 178, 125, 0.3);
+}
+
+/* Стили для KuCoin (третья карточка) */
+.partners-logos a:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 300px;
 }
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
     .partners-logos {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
+    .partners-logos a:nth-child(3) {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
     .exchange-name-card {
-        width: 250px;
         height: 100px;
     }
 
     .exchange-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 }
 
 @media screen and (max-width: 480px) {
+    .partners {
+        padding: 30px 0;
+    }
+
     .exchange-name-card {
-        width: 200px;
         height: 80px;
     }
 
     .exchange-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
     }
 }
