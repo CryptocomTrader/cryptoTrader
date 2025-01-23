@@ -6,48 +6,64 @@
     text-align: center;
 }
 
-.partners h2 {
-    font-size: 3.2rem;
+.partners-title {
+    font-size: 3.5rem;
     font-weight: 800;
-    background: linear-gradient(120deg, #64FFDA, #00B4FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 50px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0, 180, 255, 0.8),
+                 0 0 20px rgba(0, 180, 255, 0.6),
+                 0 0 30px rgba(0, 180, 255, 0.4);
+    margin-bottom: 60px;
     position: relative;
     display: inline-block;
-    padding: 0 20px;
+    padding: 0 30px;
+    letter-spacing: 1px;
 }
 
-.partners h2::before {
+.partners-title::before {
     content: '';
     position: absolute;
-    width: 120%;
-    height: 120%;
-    top: -10%;
-    left: -10%;
+    width: 140%;
+    height: 140%;
+    top: -20%;
+    left: -20%;
     background: radial-gradient(
         circle at center,
-        rgba(100, 255, 218, 0.15),
+        rgba(0, 180, 255, 0.2),
         transparent 70%
     );
     z-index: -1;
-    filter: blur(8px);
+    filter: blur(15px);
 }
 
-.partners h2::after {
+.partners-title::after {
     content: '';
     position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -10px;
-    left: 0;
+    width: 120%;
+    height: 3px;
+    bottom: -15px;
+    left: -10%;
     background: linear-gradient(
         90deg,
         transparent,
+        #00B4FF,
         #64FFDA,
         #00B4FF,
         transparent
     );
+    filter: blur(1px);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.8;
+        filter: blur(1px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(2px);
+    }
 }
 
 .partners-logos {
