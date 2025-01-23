@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Academy: Криптовалютное образование 2025</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/partners.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7G2XLTNW1"></script>
@@ -26,6 +27,7 @@
     <header>
         <nav>
             <div class="logo neon-glow">Crypto Academy</div>
+            <button class="mobile-menu-btn">☰</button>
             <div class="nav-links">
                 <a href="#partners">Партнеры</a>
                 <a href="#about">О курсе</a>
@@ -39,17 +41,14 @@
         <section id="partners" class="partners">
             <h2 class="neon-glow">Наши официальные партнеры</h2>
             <div class="partners-logos">
-                <a href="https://www.binance.com" target="_blank" class="partner-logo">
-                    <img src="images/partners/binance-logo.svg" alt="Binance">
-                    <span class="exchange-name">Binance</span>
+                <a href="https://www.binance.com" target="_blank" class="exchange-name-card">
+                    <span class="exchange-title binance-style">BINANCE</span>
                 </a>
-                <a href="https://www.bybit.com" target="_blank" class="partner-logo">
-                    <img src="images/partners/bybit-logo.svg" alt="Bybit">
-                    <span class="exchange-name">Bybit</span>
+                <a href="https://www.bybit.com" target="_blank" class="exchange-name-card">
+                    <span class="exchange-title bybit-style">BYBIT</span>
                 </a>
-                <a href="https://www.kucoin.com" target="_blank" class="partner-logo">
-                    <img src="images/partners/kucoin-logo.svg" alt="KuCoin">
-                    <span class="exchange-name">KuCoin</span>
+                <a href="https://www.kucoin.com" target="_blank" class="exchange-name-card">
+                    <span class="exchange-title kucoin-style">KUCOIN</span>
                 </a>
             </div>
         </section>
@@ -202,6 +201,19 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        // Mobile menu functionality
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
     <script src="scripts.js"></script>
 </body>
 </html>
