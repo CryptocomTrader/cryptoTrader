@@ -45,6 +45,7 @@ main {
     padding: 0 15px;
     position: relative;
     overflow: hidden;
+    padding-top: 20px;
 }
 
 /* Crypto Background Elements */
@@ -61,117 +62,6 @@ main {
     background: radial-gradient(circle, var(--neon-blue), transparent 70%);
     border-radius: 50%;
     animation: float 5s infinite;
-}
-
-/* Header and Navigation */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    background: rgba(13, 21, 39, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: var(--light-text);
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Mobile Menu */
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--light-text);
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
-}
-
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background: rgba(13, 21, 39, 0.98);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-}
-
-.mobile-menu.active {
-    display: block;
-}
-
-.mobile-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mobile-menu li {
-    margin: 15px 0;
-}
-
-.mobile-menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
-    padding: 12px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu a:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .header nav {
-        padding: 10px 15px;
-    }
 }
 
 /* Hero Section with 3D Effect */
@@ -366,19 +256,6 @@ section {
 @media (max-width: 768px) {
     body {
         font-size: 14px;
-    }
-
-    .header {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
     }
 
     .hero {
@@ -659,113 +536,12 @@ footer {
     margin: 0 10px;
 }
 
-/* Mobile Navigation */
-@media screen and (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background: var(--secondary-color);
-        padding: 20px;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    /* Main Content */
-    main {
-        padding: 0 10px;
-    }
-
-    /* Hero Section */
-    .hero {
-        min-height: 60vh;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .subtitle-large {
-        font-size: 1.2rem;
-    }
-
-    /* Benefits & Reasons Grid */
-    .benefits-grid,
-    .reasons-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px 10px;
-    }
-
-    .benefit-card,
-    .reason-card {
-        padding: 20px;
-    }
-
-    /* Reviews Section */
-    .reviews-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px 10px;
-    }
-
-    .review-card {
-        padding: 20px;
-    }
-
-    /* Stats Section */
-    .stats-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 20px 10px;
-    }
-
-    .stat-card {
-        padding: 20px;
-    }
-
-    /* Footer */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .legal-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .subtitle-large {
-        font-size: 1rem;
-    }
-
-    .benefit-card,
-    .reason-card,
-    .review-card,
-    .stat-card {
-        padding: 15px;
-    }
+/* Remove old navigation styles */
+.header,
+.nav-links,
+.mobile-menu,
+.mobile-menu-btn {
+    display: none !important;
 }
 
 /* Partners Section */
